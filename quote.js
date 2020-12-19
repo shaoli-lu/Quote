@@ -6,11 +6,11 @@ getQuote();
 })
 
 function getQuote() {
-    fetch("https://quote-garden.herokuapp.com/api/v2/quotes/random").then(response => response.json()).then(data => {
+    fetch("https://quote-garden.herokuapp.com/api/v3/quotes/random").then(response => response.json()).then(data => {
     
    
-        document.querySelector('#quote').innerHTML = '"' + data.quote.quoteText  + '"' ;  
-        document.querySelector('#author').innerHTML = "-Author: " + data.quote.quoteAuthor;    
+        document.querySelector('#quote').innerHTML = '"' + data.data[0].quoteText  + '"' ;  
+        document.querySelector('#author').innerHTML = "-Author: " + data.data[0].quoteAuthor;    
        
         
             
